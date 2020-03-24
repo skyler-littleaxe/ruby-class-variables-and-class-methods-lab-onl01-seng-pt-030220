@@ -21,7 +21,6 @@ class Song
   def self.genre_count
   genre_counter = {}
   genre_counter[@@genres.group_by{ |genres| genres }.flat_map{ |genre, count| [genre, count.size] }]
-  end
   genre_counter
   end
     
