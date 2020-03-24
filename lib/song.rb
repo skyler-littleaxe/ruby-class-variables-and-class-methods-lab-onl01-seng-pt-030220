@@ -19,7 +19,8 @@ class Song
   end
   
   def self.genre_count
-  genre_counter = Hash[@@genres.group_by{ |genres| genres }.flat_map{ |genre, count| [genre, count.size] }]
+  genre_counter = {}
+  genre_counter[@@genres.group_by{ |genres| genres }.flat_map{ |genre, count| [genre, count.size] }]
   genre_counter
   end
     
