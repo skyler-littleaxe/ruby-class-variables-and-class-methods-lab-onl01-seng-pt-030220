@@ -31,7 +31,7 @@ class Song
   end
   
   def self.artist_count
-    Hashp[*@@artists.group_by{ |artist_group| artist_group }.flat_map]
+    Hash[*@@artists.group_by{ |artist_group| artist_group }.flat_map]{ |artist, count| [artist, ]
     
   
 end
