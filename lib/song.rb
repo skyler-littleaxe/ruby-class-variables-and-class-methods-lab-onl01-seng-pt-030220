@@ -18,6 +18,14 @@ class Song
     @@count 
   end
   
+  def artists
+    @@artists
+  end
+  
+  def genres
+    @@genres
+  end
+  
   def self.genre_count
   genre_counter = {}
   genre_counter[@@genres.group_by{ |genres| genres }.flat_map{ |genre, count| [genre, count.size] }]
